@@ -68,7 +68,7 @@ const Dashboard = () => {
           </div>
           
           {/* Simple Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 max-w-3xl mx-auto space-x-4">
             <div className="bg-blue-50 p-6 rounded-lg text-center">
               <div className="text-2xl font-bold text-blue-600 mb-1">{user.streaks || 0}</div>
               <p className="text-gray-600 text-sm">Day Streak 🔥</p>

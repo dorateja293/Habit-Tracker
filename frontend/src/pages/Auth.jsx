@@ -21,13 +21,22 @@ const Auth = () => {
         const res = await api.post('/auth/login', { email: formData.email, password: formData.password });
         localStorage.setItem('token', res.data.token);
       } else {
-        const res = await api.post('/auth/register', formData);
+        const { name, email, password } = formData;
+        if (!name.trim() || !email.trim() || !password.trim()) {
+          alert('Please fill in all required fields');
+          return;
+        }
+        const res = await api.post('/auth/register', { name, email, password });
         localStorage.setItem('token', res.data.token);
       }
       window.location.href = '/dashboard';
     } catch (err) {
       console.error(err);
-      alert('Authentication failed');
+      if (err.response?.data?.msg) {
+        alert(err.response.data.msg);
+      } else {
+        alert('Authentication failed');
+      }
     }
   };
 
