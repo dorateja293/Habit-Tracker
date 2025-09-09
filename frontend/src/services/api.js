@@ -1,9 +1,11 @@
 import axios from 'axios';
 
+// Create a single axios instance with a base URL
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
+  baseURL: "https://habit-tracker-backend.onrender.com/api",
 });
 
+// Add the interceptor to the single 'api' instance
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
   if (token) {
@@ -12,4 +14,5 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
+// Export the single, configured 'api' instance
 export default api;
