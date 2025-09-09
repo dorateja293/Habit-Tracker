@@ -1,22 +1,18 @@
 # 🎯 Habit Tracker Web Application
 
-[![GitHub Stars](https://img.shields.io/github/stars/dorateja293/Habit-Tracker?style=for-the-badge)](https://github.com/dorateja293/Habit-Tracker)
-[![GitHub Forks](https://img.shields.io/github/forks/dorateja293/Habit-Tracker?style=for-the-badge)](https://github.com/dorateja293/Habit-Tracker)
-[![GitHub Issues](https://img.shields.io/github/issues/dorateja293/Habit-Tracker?style=for-the-badge)](https://github.com/dorateja293/Habit-Tracker)
-
 A comprehensive full-stack habit tracking web application built with React, Node.js, Express, and MongoDB. Track your daily habits, connect with friends, maintain accountability through social features, and achieve your personal goals.
 
 ## Features
 
-- ✅ User authentication (JWT)
-- ✅ Create, edit, delete habits
-- ✅ Track habit completion streaks
-- ✅ Filter habits by category
-- ✅ Social features: follow friends, view activity feed
-- ✅ Leaderboard based on streaks
-- ✅ Email notifications for missed habits
-- ✅ Responsive design with Tailwind CSS
-- ✅ Docker support
+-  User authentication (JWT)
+-  Create, edit, delete habits
+-  Track habit completion streaks
+-  Filter habits by category
+-  Social features: follow friends, view activity feed
+-  Leaderboard based on streaks
+-  Email notifications for missed habits
+-  Responsive design with Tailwind CSS
+-  Docker support
 
 ## Tech Stack
 
@@ -147,38 +143,6 @@ habit-tracker/
 ├── docker-compose.yml
 └── README.md
 ```
-
-## Deployment
-
-### Frontend (Vercel)
-1. Push frontend code to GitHub
-2. Connect to Vercel
-3. Set build command: `npm run build`
-4. Set output directory: `dist`
-
-### Backend (Railway/Render)
-1. Push backend code to GitHub
-2. Connect to Railway/Render
-3. Set environment variables
-4. Deploy
-
-### Database (MongoDB Atlas)
-1. Create cluster on MongoDB Atlas
-2. Get connection string
-3. Add to environment variables
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgments
 
 - Built with ❤️ using React and Node.js
