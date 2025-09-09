@@ -12,7 +12,6 @@ A comprehensive full-stack habit tracking web application built with React, Node
 -  Leaderboard based on streaks
 -  Email notifications for missed habits
 -  Responsive design with Tailwind CSS
--  Docker support
 
 ## Tech Stack
 
@@ -33,7 +32,6 @@ A comprehensive full-stack habit tracking web application built with React, Node
 - Node-cron for scheduled tasks
 
 ### Deployment
-- Docker & Docker Compose
 - Vercel (frontend)
 - Railway/Render (backend)
 - MongoDB Atlas
@@ -43,7 +41,6 @@ A comprehensive full-stack habit tracking web application built with React, Node
 ### Prerequisites
 - Node.js (v16 or higher)
 - MongoDB (local or Atlas)
-- Docker (optional)
 
 ### Installation
 
@@ -77,11 +74,6 @@ EMAIL_PASS=your_email_app_password
 ```
 
 ### Running the Application
-
-#### Option 1: Using Docker (Recommended)
-```bash
-docker-compose up --build
-```
 
 #### Option 2: Manual Setup
 
@@ -140,7 +132,6 @@ habit-tracker/
 │   │   ├── pages/
 │   │   └── services/
 │   └── public/
-├── docker-compose.yml
 └── README.md
 ```
 ## Acknowledgments

@@ -2,6 +2,8 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const cron = require('node-cron');
+const { sendDailyReminders } = require('./controllers/notificationController');
 
 const app = express();
 
@@ -37,3 +39,14 @@ app.use('/api/notifications', notificationRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+// Schedule daily reminders at 9 AM
+cron.schedule('0 9 * * *', async () => {
+  console.log('Sending daily habit reminders...');
+  try {
+    await sendDailyReminders(null, { json: () => {}, status: () => ({ json: () => {} }) });
+    console.log('Daily reminders sent successfully');
+  } catch (err) {
+    console.error('Error sending daily reminders:', err);
+  }
+});

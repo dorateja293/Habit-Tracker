@@ -6,7 +6,7 @@ const HabitCompletion = require('../models/HabitCompletion');
 exports.sendDailyReminders = async (req, res) => {
   try {
     const users = await User.find();
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
         user: process.env.EMAIL_USER,
