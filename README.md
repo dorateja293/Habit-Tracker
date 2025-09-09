@@ -138,4 +138,4 @@ habit-tracker/
 
 - Built with ❤️ using React and Node.js
 - Styled with Tailwind CSS
-- Icons from Heroicons
+- Icons from Heroicons.
